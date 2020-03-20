@@ -29,6 +29,7 @@ pipeline {
         stage("Stop old container") {
             steps {
                 script {
+                    // bypass errors with true in order to complete the pipeline
                     sh 'docker stop web || true'
                 }
             }
